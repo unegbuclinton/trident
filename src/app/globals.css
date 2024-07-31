@@ -34,7 +34,7 @@
 .bottom {
   color: #fff;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .top,
@@ -91,7 +91,7 @@
 .container-segment {
   display: flex;
   flex-direction: column;
-  gap: 10.5px;
+  gap: 15.5px;
   align-items: center;
 }
 

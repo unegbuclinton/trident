@@ -1,38 +1,60 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 
-const FlipClock = () => {
-  // State to hold the current time
-  const [time, setTime] = useState(new Date())
+const FlipClock = ({
+  initialDays = 5,
+  initialHours = 0,
+  initialMinutes = 0,
+  initialSeconds = 0,
+}) => {
+  // State to hold the remaining time in seconds
+  const [time, setTime] = useState(
+    initialDays * 24 * 60 * 60 +
+      initialHours * 60 * 60 +
+      initialMinutes * 60 +
+      initialSeconds
+  )
 
-  // Effect to update the time every second
   useEffect(() => {
     const timerId = setInterval(() => {
-      setTime(new Date())
+      setTime((prevTime) => (prevTime > 0 ? prevTime - 1 : 0))
     }, 1000)
 
-    return () => clearInterval(timerId) // Cleanup the timer on unmount
+    return () => clearInterval(timerId)
   }, [])
 
   const formatTime = (value: number) => {
     return value < 10 ? `0${value}` : `${value}`
   }
 
-  // Extract hours, minutes, and seconds from the current time
-  const hours = formatTime(time.getHours())
-  const minutes = formatTime(time.getMinutes())
-  const seconds = formatTime(time.getSeconds())
+  const days = formatTime(Math.floor(time / (24 * 60 * 60)))
+  const hours = formatTime(Math.floor((time % (24 * 60 * 60)) / (60 * 60)))
+  const minutes = formatTime(Math.floor((time % (60 * 60)) / 60))
+  const seconds = formatTime(time % 60)
 
   return (
     <div className='flex gap-1 justify-center lg:justify-end lg:mb-[140px]'>
       <div className='container-segment'>
+        <div className='segment-title'>Days</div>
+        <div className='segment'>
+          <div className='flip-card'>
+            <div className='top'>{days[0]}</div>
+            <div className='bottom'>{days[0]}</div>
+          </div>
+          <div className='flip-card'>
+            <div className='top'>{days[1]}</div>
+            <div className='bottom'>{days[1]}</div>
+          </div>
+        </div>
+      </div>
+      <div className='container-segment'>
         <div className='segment-title'>Hours</div>
         <div className='segment'>
-          <div className='flip-card' data-hours-tens>
+          <div className='flip-card'>
             <div className='top'>{hours[0]}</div>
             <div className='bottom'>{hours[0]}</div>
           </div>
-          <div className='flip-card' data-hours-ones>
+          <div className='flip-card'>
             <div className='top'>{hours[1]}</div>
             <div className='bottom'>{hours[1]}</div>
           </div>
@@ -41,11 +63,11 @@ const FlipClock = () => {
       <div className='container-segment'>
         <div className='segment-title'>Minutes</div>
         <div className='segment'>
-          <div className='flip-card' data-minutes-tens>
+          <div className='flip-card'>
             <div className='top'>{minutes[0]}</div>
             <div className='bottom'>{minutes[0]}</div>
           </div>
-          <div className='flip-card' data-minutes-ones>
+          <div className='flip-card'>
             <div className='top'>{minutes[1]}</div>
             <div className='bottom'>{minutes[1]}</div>
           </div>
@@ -54,11 +76,11 @@ const FlipClock = () => {
       <div className='container-segment'>
         <div className='segment-title'>Seconds</div>
         <div className='segment'>
-          <div className='flip-card' data-seconds-tens>
+          <div className='flip-card'>
             <div className='top'>{seconds[0]}</div>
             <div className='bottom'>{seconds[0]}</div>
           </div>
-          <div className='flip-card' data-seconds-ones>
+          <div className='flip-card'>
             <div className='top'>{seconds[1]}</div>
             <div className='bottom'>{seconds[1]}</div>
           </div>
