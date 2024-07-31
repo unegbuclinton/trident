@@ -17,7 +17,7 @@ const Navbar = () => {
       <span className='lg:hidden'>
         <TdIcon iconName='hamburgerIcon' />
       </span>
-      <ul className='flex'>
+      <ul className='hidden lg:flex'>
         {links.map(({ title, url }, index) => (
           <li key={index} className='text-white text-base font-medium  ml-28'>
             <Link href={url}>{title}</Link>

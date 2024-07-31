@@ -91,7 +91,7 @@
 .container-segment {
   display: flex;
   flex-direction: column;
-  gap: 0.1em;
+  gap: 10.5px;
   align-items: center;
 }
 

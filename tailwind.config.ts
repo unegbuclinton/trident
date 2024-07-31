@@ -31,6 +31,7 @@ const config: Config = {
       lightGrey: '#A5A6AF',
       darkGrey: ' #696F6E',
       borderLine: '#582775',
+      borderColor: '#414245',
     },
   },
   plugins: [],

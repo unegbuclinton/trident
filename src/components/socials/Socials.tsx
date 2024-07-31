@@ -5,7 +5,7 @@ import TdIcon from '../TdIcon/TdIcon'
 
 const Socials = () => {
   return (
-    <div>
+    <div className='hidden lg:block'>
       <a className='text-white' href='mailto:hello@tcpconcept.com'>
         hello@tcpconcept.com
       </a>
