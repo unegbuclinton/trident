@@ -85,7 +85,7 @@
 .container {
   display: flex;
   gap: 0.5em;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .container-segment {
@@ -104,4 +104,11 @@
   font-size: 10px;
   font-weight: 500;
   color: white;
+}
+
+@media screen and (min-width: 1020px) {
+  .top,
+  .bottom {
+    font-size: 80px;
+  }
 }

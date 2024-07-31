@@ -13,6 +13,8 @@ const config: Config = {
           'linear-gradient(90deg, rgba(223, 223, 223, 0.04) 0%, rgba(223, 223, 223, 0.1) 38.79%, rgba(223, 223, 223, 0.1) 59.26%, rgba(223, 223, 223, 0.06) 100%)',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hero-img-sm': "url('/hero-img.png')",
+        'hero-img-lg': "url('/hero-img-lg.png')",
       },
     },
     fontSize: {
@@ -23,8 +25,11 @@ const config: Config = {
     },
     colors: {
       white: '#fff',
+      dark: '#000',
       primaryColor: ' #290F38',
       secondaryColor: '#FBAE1C',
+      lightGrey: '#A5A6AF',
+      darkGrey: ' #696F6E',
       borderLine: '#582775',
     },
   },

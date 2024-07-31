@@ -24,7 +24,7 @@ const FlipClock = () => {
   const seconds = formatTime(time.getSeconds())
 
   return (
-    <div className='container'>
+    <div className='flex gap-1 justify-center lg:justify-end lg:mb-[140px]'>
       <div className='container-segment'>
         <div className='segment-title'>Hours</div>
         <div className='segment'>
