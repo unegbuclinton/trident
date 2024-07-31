@@ -12,6 +12,36 @@ export const icons: Record<string, React.ReactNode> = {
       <rect x='3' y='18' width='18' height='2' rx='1' fill='white' />
     </svg>
   ),
+
+  cancelIcon: (
+    <svg
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <rect
+        x='6'
+        y='11'
+        width='18'
+        height='2'
+        rx='1'
+        transform='rotate(45 12 12)'
+        fill='white'
+      />
+      <rect
+        x='6'
+        y='11'
+        width='18'
+        height='2'
+        rx='1'
+        transform='rotate(-45 12 12)'
+        fill='white'
+      />
+    </svg>
+  ),
+
   instagramIcon: (
     <svg
       width='50'
