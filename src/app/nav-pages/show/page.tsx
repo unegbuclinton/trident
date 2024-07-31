@@ -11,7 +11,7 @@ const SHow = () => {
         interests and demographics not only in Nigeria, but the emerging global
         market led by a diverse group of thinkers, creatives and fans of content
         across the board. Stay tuned as we take you through a journey of
-        innovative content and entertainment like you've never seen before
+        innovative content and entertainment like you&apos;ve never seen before
       </p>
     </div>
   )
