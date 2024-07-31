@@ -6,7 +6,7 @@ import Socials from '../socials/Socials'
 
 const Footer = () => {
   return (
-    <footer className='bg-dark pt-3 pb-7 px-6 lg:pt-12 lg:px-24'>
+    <footer className='bg-dark pt-3 pb-7 px-6 lg:pt-12 lg:px-24 w-full'>
       <div className='w-full lg:flex items-center justify-between mb-20 pb-14 border-b border-borderColor'>
         <Image
           alt='footer-logo'

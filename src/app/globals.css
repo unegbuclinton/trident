@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Oswald:wght@200..700&display=swap');
-
 *,
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-oswald), sans-serif;
 }
 
 .flip-card {
@@ -20,6 +18,9 @@
   border-radius: 0.1em;
 }
 
+.lato {
+  font-family: var(--font-lato), sans-serif;
+}
 .top,
 .bottom,
 .flip-card .top-flip,
@@ -109,6 +110,18 @@
 @media screen and (min-width: 1020px) {
   .top,
   .bottom {
-    font-size: 80px;
+    font-size: 60px;
   }
+}
+
+.overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.7;
+  z-index: 1;
 }

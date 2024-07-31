@@ -1,3 +1,4 @@
+import { Oswald } from 'next/font/google'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -17,9 +18,7 @@ const config: Config = {
         'hero-img-lg': "url('/hero-img-lg.png')",
       },
     },
-    fontSize: {
-      '4xl': '36px',
-    },
+
     boxShadow: {
       shadowLight: '0px 4px 4px rgba(0, 0, 0, 0.25)',
     },

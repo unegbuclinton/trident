@@ -1,7 +1,7 @@
 export const links: { url: string; title: string }[] = [
-  { url: '', title: 'The Show' },
+  { url: '/nav-pages/show', title: 'The Show' },
   { url: '', title: 'FAQ' },
-  { url: '', title: 'About us' },
+  { url: '/nav-pages/about', title: 'About us' },
   { url: '', title: 'Contact us' },
 ]
 
@@ -40,4 +40,22 @@ export const socialLinks: { icon: string; url: string }[] = [
     icon: 'facebookIcon',
     url: '',
   },
+]
+
+export const faqData = [
+  {
+    question: 'What is your return policy?',
+    answer:
+      'You can return any item within 30 days of purchase if it is in its original condition.',
+  },
+  {
+    question: 'Do you ship internationally?',
+    answer: 'Yes, we ship to over 100 countries worldwide.',
+  },
+  {
+    question: 'How can I track my order?',
+    answer:
+      'Once your order has been shipped, you will receive an email with a tracking number.',
+  },
+  // Add more questions and answers here as needed
 ]

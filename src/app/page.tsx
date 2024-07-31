@@ -7,11 +7,11 @@ import { detailsInfo } from '@/lib/resueableJson'
 export default function Home() {
   return (
     <main className=''>
-      <div className='bg-hero-img-sm lg:bg-hero-img-lg bg-cover bg-center h-[80vh] p-4 flex flex-col justify-between pb-20 lg:px-[80px]'>
+      <div className='overlay relative bg-hero-img-sm lg:bg-hero-img-lg bg-cover bg-center h-[80vh] p-4 flex flex-col justify-between pb-20 lg:px-[80px]'>
         <Navbar />
         <FlipClock />
       </div>
-      <div className='bg-primaryColor py-6 px-5 pb-7 lg:flex gap-14 lg:px-24'>
+      <div className='bg-primaryColor py-6 px-5 pb-7 lg:flex gap-14 lg:ox'>
         {detailsInfo.map(({ subTitle, title }, index) => (
           <DetailCard subtitle={subTitle} title={title} key={index} />
         ))}
