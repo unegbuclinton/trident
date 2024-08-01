@@ -45,6 +45,7 @@ const Navbar = () => {
             <li
               key={index}
               className='text-white text-base font-medium  mb-10 text-right '
+              onClick={() => setToggle(false)}
             >
               <Link href={url}>{title}</Link>
             </li>
