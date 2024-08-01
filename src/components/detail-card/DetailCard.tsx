@@ -9,13 +9,13 @@ const DetailCard = ({
 }) => {
   return (
     <div className='mb-6'>
-      <h2 className=' text-secondaryColor text-[36px] border-b border-borderLine pb-3.5  mb-3.5'>
+      <h2 className=' text-secondaryColor text-[32px] border-b border-borderLine pb-3.5  mb-3.5'>
         {title}
       </h2>
       <p className='text-base mb-3 text-white'>{subtitle}</p>
-      <p className='text-xs text-secondaryColor cursor-pointer hover:text-primaryColor'>
+      {/* <p className='text-xs text-secondaryColor cursor-pointer hover:text-primaryColor'>
         Read More
-      </p>
+      </p> */}
     </div>
   )
 }
