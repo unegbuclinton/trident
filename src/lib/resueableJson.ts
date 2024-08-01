@@ -44,18 +44,27 @@ export const socialLinks: { icon: string; url: string }[] = [
 
 export const faqData = [
   {
-    question: 'What is your return policy  ?',
+    question: 'When does the show start?',
     answer:
-      'You can return any item within 30 days of purchase if it is in its original condition.',
+      'Right after you see the first episode go live on your TV and anywhere else you get your media from',
   },
   {
-    question: 'Do you ship internationally?',
+    question: 'How much is at stake?',
     answer: 'Yes, we ship to over 100 countries worldwide.',
   },
   {
-    question: 'How can I track my order?',
+    question: 'How many contestants?',
     answer:
       'Once your order has been shipped, you will receive an email with a tracking number.',
   },
-  // Add more questions and answers here as needed
+  {
+    question: 'How long will the show run?',
+    answer:
+      'Once your order has been shipped, you will receive an email with a tracking number.',
+  },
+  {
+    question: 'How many people can win the grand prize?',
+    answer:
+      'Once your order has been shipped, you will receive an email with a tracking number.',
+  },
 ]
