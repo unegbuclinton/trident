@@ -44,7 +44,7 @@ export const socialLinks: { icon: string; url: string }[] = [
 
 export const faqData = [
   {
-    question: 'What is your return policy?',
+    question: 'What is your return policy  ?',
     answer:
       'You can return any item within 30 days of purchase if it is in its original condition.',
   },
