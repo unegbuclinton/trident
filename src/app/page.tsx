@@ -11,7 +11,7 @@ export default function Home() {
         <Navbar />
         <FlipClock />
       </div>
-      <div className='bg-primaryColor py-6 px-5 pb-7 lg:flex gap-14 lg:px-[100px]'>
+      <div className='bg-primaryColor py-5 px-5 pb-7 lg:flex gap-14 lg:px-[100px]'>
         {detailsInfo.map(({ subTitle, title }, index) => (
           <DetailCard subtitle={subTitle} title={title} key={index} />
         ))}
