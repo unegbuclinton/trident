@@ -6,7 +6,7 @@ import React, { ReactNode } from 'react'
 const layout = ({ children }: { children: ReactNode }) => {
   return (
     <div>
-      <div className='relative bg-hero-img-sm lg:bg-hero-img-lg bg-cover bg-center p-4 flex flex-col justify-between pb-20 lg:px-[80px] overlay'>
+      <div className='relative bg-hero-img-sm lg:bg-hero-img-lg bg-cover bg-center h-[1100px] p-4 flex flex-col justify-between pb-20 lg:px-[80px] overlay'>
         <Navbar />
         <div className='absolute top-28 right-4'>
           <FlipClock />
