@@ -8,7 +8,7 @@ import Link from 'next/link'
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   return (
-    <nav className='flex items-center justify-between rounded-3xl shadow-shadowLight bg-glass-bg px-4 lg:px-8 py-2.5 z-10'>
+    <nav className='flex items-center justify-between rounded-3xl border border-white/15 shadow-shadowLight bg-glass-bg px-4 lg:px-8 py-2.5 z-10'>
       <Link href={'/'}>
         <Image
           alt='logo'
@@ -30,7 +30,7 @@ const Navbar = () => {
       </ul>
 
       <div
-        className={`fixed top-[17px] right-0 h-screen w-[256px] bg-[#070613] py-9 px-5 z-10 transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-screen w-[256px] bg-[#070613] py-9 px-5 z-20 transition-transform duration-300 ${
           toggle ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

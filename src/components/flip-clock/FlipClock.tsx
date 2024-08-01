@@ -33,7 +33,7 @@ const FlipClock = ({
   const seconds = formatTime(time % 60)
 
   return (
-    <div className='flex gap-2.5 justify-center lg:justify-end lg:mb-[140px]'>
+    <div className='flex gap-2.5 justify-center lg:justify-end lg:mb-[140px] z-10'>
       <div className='container-segment'>
         <div className='segment-title'>Days</div>
         <div className='segment'>

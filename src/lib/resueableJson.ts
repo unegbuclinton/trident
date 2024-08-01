@@ -1,6 +1,6 @@
 export const links: { url: string; title: string }[] = [
   { url: '/nav-pages/show', title: 'The Show' },
-  { url: '', title: 'FAQ' },
+  { url: '/nav-pages/faq', title: 'FAQ' },
   { url: '/nav-pages/about', title: 'About us' },
   { url: '', title: 'Contact us' },
 ]

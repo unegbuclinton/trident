@@ -7,7 +7,7 @@ import { detailsInfo } from '@/lib/resueableJson'
 export default function Home() {
   return (
     <main className=''>
-      <div className='overlay relative bg-hero-img-sm lg:bg-hero-img-lg bg-cover bg-center h-[80vh] p-4 flex flex-col justify-between pb-20 lg:px-[80px]'>
+      <div className='cover relative bg-hero-img-sm lg:bg-hero-img-lg bg-cover bg-center h-[80vh] p-4 flex flex-col justify-between pb-20 lg:px-[80px]'>
         <Navbar />
         <FlipClock />
       </div>
