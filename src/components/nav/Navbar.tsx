@@ -44,7 +44,7 @@ const Navbar = () => {
           {links.map(({ title, url }, index) => (
             <li
               key={index}
-              className='text-white text-base font-medium  mb-10 text-right '
+              className='text-white text-base font-medium  mb-6 text-right pb-6 border-b border-darkGrey'
               onClick={() => setToggle(false)}
             >
               <Link href={url}>{title}</Link>

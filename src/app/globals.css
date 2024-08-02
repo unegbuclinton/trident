@@ -19,7 +19,7 @@
 }
 
 .lato {
-  font-family: var(--font-lato), sans-serif;
+  font-family: var(--font-lato), sans-serif !important;
 }
 .top,
 .bottom,

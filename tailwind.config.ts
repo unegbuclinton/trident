@@ -16,6 +16,7 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'hero-img-sm': "url('/hero-img.png')",
         'hero-img-lg': "url('/hero-img-lg.png')",
+        'nav-hero': "url('/nav-hero-img.png')",
       },
     },
 
@@ -24,6 +25,7 @@ const config: Config = {
     },
     colors: {
       white: '#fff',
+      black: '#000',
       dark: '#000',
       primaryColor: ' #290F38',
       secondaryColor: '#FBAE1C',

@@ -14,7 +14,7 @@ const Show = () => {
         relationships to the test in a winner takes all contest, are you brave
         enough to go for it? Show us now.
       </p>
-      <p className='pb-4 leading-10 text-lg font-light'>
+      <p className='pb-4 '>
         Enter to be one of twenty two people who will make it to the campus to
         vie against the system, and other contestants for a shot at glory, and
         money!

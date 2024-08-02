@@ -2,7 +2,7 @@ export const links: { url: string; title: string }[] = [
   { url: '/nav-pages/show', title: 'The Show' },
   { url: '/nav-pages/faq', title: 'FAQ' },
   { url: '/nav-pages/about', title: 'About us' },
-  { url: '', title: 'Contact us' },
+  { url: '/contact', title: 'Contact us' },
 ]
 
 export const detailsInfo: { title: string; subTitle: string }[] = [
