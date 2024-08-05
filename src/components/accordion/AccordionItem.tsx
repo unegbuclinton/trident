@@ -4,9 +4,13 @@ const AccordionItem = ({
   faq,
   isOpen,
   onClick,
+  questionStyle,
+  answerStyle,
 }: {
   faq: { question: string; answer: string }
   isOpen: boolean
+  answerStyle?: string
+  questionStyle?: string
   onClick: () => void
 }) => {
   return (
@@ -15,7 +19,9 @@ const AccordionItem = ({
         className='w-full p-4 text-left bg-gray-100 hover:bg-gray-200 flex justify-between items-center focus:outline-none'
         onClick={onClick}
       >
-        <p className='text-white text-xl font-bold'> {faq.question}</p>
+        <p className={`text-white text-xl font-bold lato ${questionStyle}`}>
+          {faq.question}
+        </p>
         <span className='cursor-pointer'>
           {isOpen ? (
             <TdIcon iconName='minusIocn' />
@@ -29,7 +35,9 @@ const AccordionItem = ({
           isOpen ? 'max-h-96' : 'max-h-0'
         }`}
       >
-        <p className='p-4 text-base text-white'>{faq.answer}</p>
+        <p className={`p-4 text-base text-white lato ${answerStyle}`}>
+          {faq.answer}
+        </p>
       </div>
     </div>
   )

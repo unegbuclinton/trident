@@ -5,6 +5,13 @@ export const links: { url: string; title: string }[] = [
   { url: '/contact', title: 'Contact us' },
 ]
 
+export const officialLinks: { url: string; title: string }[] = [
+  { url: '#', title: 'Home' },
+  { url: '#', title: 'About the show' },
+  { url: '#', title: 'FAQ' },
+  { url: '#', title: 'Show concept' },
+]
+
 export const detailsInfo: { title: string; subTitle: string }[] = [
   {
     title: '22 Contestants',

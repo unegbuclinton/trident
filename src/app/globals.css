@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Oswald:wght@200..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,7 +20,7 @@
 }
 
 .lato {
-  font-family: var(--font-lato), sans-serif !important;
+  font-family: 'Lato', sans-serif;
 }
 .top,
 .bottom,
@@ -66,6 +67,17 @@
   100% {
     transform: rotateX(90deg);
   }
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows/spinner controls in Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .flip-card .bottom-flip {
