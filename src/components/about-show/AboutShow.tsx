@@ -4,7 +4,7 @@ const AboutShow = () => {
   return (
     <div
       id='About the show'
-      className='py-20 mx-auto max-w-[758px] text-white  px-4'
+      className='py-20 mx-auto max-w-[758px] text-white  px-6'
     >
       <div className='max-w-[608px]'>
         <p className='text-xl text-secondaryColor mb-4 lato'>About the show</p>

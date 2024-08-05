@@ -8,7 +8,7 @@ const FrequentQuestions = () => {
     setOpenIndex(openIndex === index ? null : index)
   }
   return (
-    <div id='FAQ' className='max-w-[954px] mx-auto py-20 px-4'>
+    <div id='FAQ' className='max-w-[954px] mx-auto py-20 px-6'>
       <h2 className='text-titleColor mb-16 text-3xl'>
         Frequently Asked Questions
       </h2>

@@ -1,13 +1,11 @@
 'use client'
 import AboutShow from '@/components/about-show/AboutShow'
-import AccordionItem from '@/components/accordion/AccordionItem'
 import ApplicationForm from '@/components/application-form/ApplicationForm'
 import Footer from '@/components/footer/Footer'
 import FrequentQuestions from '@/components/frequent-question/FrequentQuestions'
 import HeroSection from '@/components/hero/HeroSection'
 import OfficialNav from '@/components/nav/OfficialNav'
-import { faqData } from '@/lib/resueableJson'
-import React, { useState } from 'react'
+import React from 'react'
 
 const LandingPage = () => {
   return (
@@ -16,8 +14,8 @@ const LandingPage = () => {
       <HeroSection />
       <AboutShow />
 
-      <div className='relative py-20'>
-        <div className='bg-money-img bg-cover bg-no-repeat bg-left h-[483px] flex items-center justify-center gap-7'>
+      <div id='Show concept' className='relative py-20'>
+        <div className='bg-money-img bg-cover bg-no-repeat bg-left lg:h-[483px] lg:flex items-center justify-center gap-7'>
           <div className='flex justify-start flex-col h-full max-w-[380px] pt-4'>
             <p className='text-xl text-secondaryColor mb-4 lato'>
               The grand prize
@@ -26,7 +24,7 @@ const LandingPage = () => {
               Compete for the Ultimate Reward of $50,000
             </h2>
           </div>
-          <div className='w-[460px] text-white p-8 rounded-[24px] bg-card-bg -mt-10'>
+          <div className='max-w-[460px] text-white p-8 rounded-[24px] bg-card-bg -mt-10'>
             <p className='mb-4 leading-8'>
               Unlike other shows, the prize money exists on a sliding scale.
             </p>
@@ -49,6 +47,16 @@ const LandingPage = () => {
       </div>
       <FrequentQuestions />
       <ApplicationForm />
+      {/* 
+      <div className='max-w-[900px] mx-auto  px-4 pb-10'>
+        <iframe
+          src='https://nicelyformed.com/publications/44daf1dc-7546-4ead-8919-5933bcd7d5f2'
+          width='100%'
+          height='800'
+          frameborder='0'
+          allowfullscreen
+        ></iframe>
+      </div> */}
 
       <Footer />
     </div>

@@ -46,7 +46,7 @@ const ApplicationForm = () => {
   return (
     <div
       id='application'
-      className='py-10 text-[#A5A6AF] max-w-[758px] mx-auto  px-4'
+      className='py-10 text-[#A5A6AF] max-w-[758px] mx-auto  px-6'
     >
       <div className='flex justify-start flex-col h-full max-w-[527px] pt-4 mb-16'>
         <p className='text-xl text-secondaryColor mb-4 lato'>Apply Now</p>

@@ -36,7 +36,7 @@ const OfficialNav = () => {
     <nav
       className={`fixed ${
         showNav ? 'flex' : 'hidden'
-      } top-0 left-0 right-0 justify-between lg:justify-start gap-[10rem] items-center lg:pl-[144px] py-7 z-10 bg-landing-img  px-4`}
+      } top-0 left-0 right-0 justify-between lg:justify-start gap-[10rem] items-center lg:pl-[144px] py-7 z-10 bg-landing-img  px-6`}
     >
       <Link href={'/'}>
         <Image alt='logo' src={'/logo.png'} width={66} height={48} />
@@ -72,9 +72,12 @@ const OfficialNav = () => {
             <li
               key={index}
               className='text-white text-base font-medium  mb-6 text-right pb-6 border-b border-darkGrey'
-              onClick={() => setToggle(false)}
+              onClick={() => {
+                setToggle(false)
+                handleScroll(title)
+              }}
             >
-              <Link href={url}>{title}</Link>
+              {title}
             </li>
           ))}
         </ul>
