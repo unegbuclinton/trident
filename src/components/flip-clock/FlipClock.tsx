@@ -1,27 +1,42 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 
-const FlipClock = ({
-  initialDays = 5,
-  initialHours = 0,
-  initialMinutes = 0,
-  initialSeconds = 0,
-}) => {
-  // State to hold the remaining time in seconds
-  const [time, setTime] = useState(
-    initialDays * 24 * 60 * 60 +
-      initialHours * 60 * 60 +
-      initialMinutes * 60 +
-      initialSeconds
+const FlipClock = () => {
+  const calculateEndDate = () => {
+    const endDate = new Date('2024-08-26T00:00:00')
+    return endDate.getTime()
+  }
+
+  const getSavedEndDate = () => {
+    const savedEndDate = localStorage.getItem('countdownEndDate')
+    return savedEndDate ? parseInt(savedEndDate, 10) : calculateEndDate()
+  }
+
+  const [endDate, setEndDate] = useState(getSavedEndDate())
+  const [time, setTime] = useState(() =>
+    Math.max(0, Math.floor((endDate - new Date().getTime()) / 1000))
   )
 
   useEffect(() => {
+    if (!localStorage.getItem('countdownEndDate')) {
+      localStorage.setItem('countdownEndDate', endDate.toString())
+    }
+
     const timerId = setInterval(() => {
-      setTime((prevTime) => (prevTime > 0 ? prevTime - 1 : 0))
+      const currentTime = new Date().getTime()
+      const remainingTime = Math.max(
+        0,
+        Math.floor((endDate - currentTime) / 1000)
+      )
+      setTime(remainingTime)
+
+      if (remainingTime <= 0) {
+        clearInterval(timerId)
+      }
     }, 1000)
 
     return () => clearInterval(timerId)
-  }, [])
+  }, [endDate])
 
   const formatTime = (value: number) => {
     return value < 10 ? `0${value}` : `${value}`
@@ -31,7 +46,6 @@ const FlipClock = ({
   const hours = formatTime(Math.floor((time % (24 * 60 * 60)) / (60 * 60)))
   const minutes = formatTime(Math.floor((time % (60 * 60)) / 60))
   const seconds = formatTime(time % 60)
-
   return (
     <div className='flex gap-2.5 justify-center lg:justify-end lg:mb-[140px] z-[5]'>
       <div className='container-segment'>
