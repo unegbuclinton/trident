@@ -1,6 +1,6 @@
-export const links: { url: string; title: string }[] = [
+export const links: { url: string; title: string; disabled?: boolean }[] = [
   { url: '/nav-pages/show', title: 'The Show' },
-  { url: '/nav-pages/faq', title: 'FAQ' },
+  { url: '/nav-pages/faq', title: 'FAQ', disabled: true },
   { url: '/nav-pages/about', title: 'About us' },
   { url: '/contact', title: 'Contact us' },
 ]

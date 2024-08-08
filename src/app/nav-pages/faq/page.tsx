@@ -11,7 +11,7 @@ const Faq = () => {
   }
 
   return (
-    <div className='py-36 lg:py-20 text-white max-w-[757px] mx-auto my-0 h-[900px]'>
+    <div className='py-36 lg:py-20 text-white max-w-[757px] mx-auto my-0 h-[700px]'>
       <h2 className='mb-14 text-[40px] lato text-secondaryColor'>
         Frequently Ask Questions
       </h2>

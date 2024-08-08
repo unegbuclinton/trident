@@ -2,7 +2,7 @@ import React from 'react'
 
 const Show = () => {
   return (
-    <div className='py-36 lg:py-20 text-white max-w-[757px] mx-auto my-0 text-xl font-light lato'>
+    <div className='py-36 lg:py-20 text-white max-w-[757px] mx-auto my-0 text-xl font-light lato h-[700px]'>
       <h2 className='mb-14 text-[40px] lato text-secondaryColor'>The show</h2>
       <p className='pb-4 leading-10 text-lg font-light'>
         TCT Nigeria is presenting an adversarial style tv variety and reality
