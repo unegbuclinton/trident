@@ -1,63 +1,32 @@
 'use client'
+import useCountdownTimer from '@/lib/conutdownTimer'
 import React, { useState, useEffect } from 'react'
 
 const FlipClock = () => {
-  const calculateEndDate = () => {
-    const endDate = new Date('2024-08-26T00:00:00')
-    return endDate.getTime()
-  }
+  const preciseEndDate = new Date('2024-09-01T00:00:00').getTime()
 
-  const getSavedEndDate = () => {
-    const savedEndDate = localStorage.getItem('countdownEndDate')
-    return savedEndDate ? parseInt(savedEndDate, 10) : calculateEndDate()
-  }
-
-  const [endDate, setEndDate] = useState(getSavedEndDate())
-  const [time, setTime] = useState(() =>
-    Math.max(0, Math.floor((endDate - new Date().getTime()) / 1000))
-  )
-
-  useEffect(() => {
-    if (!localStorage.getItem('countdownEndDate')) {
-      localStorage.setItem('countdownEndDate', endDate.toString())
-    }
-
-    const timerId = setInterval(() => {
-      const currentTime = new Date().getTime()
-      const remainingTime = Math.max(
-        0,
-        Math.floor((endDate - currentTime) / 1000)
-      )
-      setTime(remainingTime)
-
-      if (remainingTime <= 0) {
-        clearInterval(timerId)
-      }
-    }, 1000)
-
-    return () => clearInterval(timerId)
-  }, [endDate])
+  const { days, hours, minutes, seconds } = useCountdownTimer(preciseEndDate)
 
   const formatTime = (value: number) => {
     return value < 10 ? `0${value}` : `${value}`
   }
 
-  const days = formatTime(Math.floor(time / (24 * 60 * 60)))
-  const hours = formatTime(Math.floor((time % (24 * 60 * 60)) / (60 * 60)))
-  const minutes = formatTime(Math.floor((time % (60 * 60)) / 60))
-  const seconds = formatTime(time % 60)
+  const formattedDays = formatTime(days)
+  const formattedHhours = formatTime(hours)
+  const formattedMinutes = formatTime(minutes)
+  const formattedSseconds = formatTime(seconds)
   return (
     <div className='flex gap-2.5 justify-center lg:justify-end lg:mb-[140px] z-[5]'>
       <div className='container-segment'>
         <div className='segment-title'>Days</div>
         <div className='segment'>
           <div className='flip-card'>
-            <div className='top'>{days[0]}</div>
-            <div className='bottom'>{days[0]}</div>
+            <div className='top'>{formattedDays[0]}</div>
+            <div className='bottom'>{formattedDays[0]}</div>
           </div>
           <div className='flip-card'>
-            <div className='top'>{days[1]}</div>
-            <div className='bottom'>{days[1]}</div>
+            <div className='top'>{formattedDays[1]}</div>
+            <div className='bottom'>{formattedDays[1]}</div>
           </div>
         </div>
       </div>
@@ -65,12 +34,12 @@ const FlipClock = () => {
         <div className='segment-title'>Hours</div>
         <div className='segment'>
           <div className='flip-card'>
-            <div className='top'>{hours[0]}</div>
-            <div className='bottom'>{hours[0]}</div>
+            <div className='top'>{formattedHhours[0]}</div>
+            <div className='bottom'>{formattedHhours[0]}</div>
           </div>
           <div className='flip-card'>
-            <div className='top'>{hours[1]}</div>
-            <div className='bottom'>{hours[1]}</div>
+            <div className='top'>{formattedHhours[1]}</div>
+            <div className='bottom'>{formattedHhours[1]}</div>
           </div>
         </div>
       </div>
@@ -78,12 +47,12 @@ const FlipClock = () => {
         <div className='segment-title'>Minutes</div>
         <div className='segment'>
           <div className='flip-card'>
-            <div className='top'>{minutes[0]}</div>
-            <div className='bottom'>{minutes[0]}</div>
+            <div className='top'>{formattedMinutes[0]}</div>
+            <div className='bottom'>{formattedMinutes[0]}</div>
           </div>
           <div className='flip-card'>
-            <div className='top'>{minutes[1]}</div>
-            <div className='bottom'>{minutes[1]}</div>
+            <div className='top'>{formattedMinutes[1]}</div>
+            <div className='bottom'>{formattedMinutes[1]}</div>
           </div>
         </div>
       </div>
@@ -91,12 +60,12 @@ const FlipClock = () => {
         <div className='segment-title'>Seconds</div>
         <div className='segment'>
           <div className='flip-card'>
-            <div className='top'>{seconds[0]}</div>
-            <div className='bottom'>{seconds[0]}</div>
+            <div className='top'>{formattedSseconds[0]}</div>
+            <div className='bottom'>{formattedSseconds[0]}</div>
           </div>
           <div className='flip-card'>
-            <div className='top'>{seconds[1]}</div>
-            <div className='bottom'>{seconds[1]}</div>
+            <div className='top'>{formattedSseconds[1]}</div>
+            <div className='bottom'>{formattedSseconds[1]}</div>
           </div>
         </div>
       </div>
