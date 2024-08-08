@@ -1,6 +1,6 @@
 'use client'
 import useCountdownTimer from '@/lib/conutdownTimer'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 const FlipClock = () => {
   const preciseEndDate = new Date('2024-08-26T00:00:00').getTime()
