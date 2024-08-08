@@ -54,7 +54,7 @@ const Contact = () => {
                   id='message'
                   value={formData.message}
                   onChange={handleChange}
-                  className='rounded-lg h-[158px] w-full p-4 text-black resize-none'
+                  className='rounded-lg h-[158px] w-full p-4 text-black resize-none outline-none'
                   placeholder='Message'
                 ></textarea>
               </div>

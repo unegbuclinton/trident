@@ -57,21 +57,18 @@ export const faqData = [
   },
   {
     question: 'How much is at stake?',
-    answer: 'Yes, we ship to over 100 countries worldwide.',
+    answer: '$50, 000',
   },
   {
     question: 'How many contestants?',
-    answer:
-      'Once your order has been shipped, you will receive an email with a tracking number.',
+    answer: '22',
   },
   {
     question: 'How long will the show run?',
-    answer:
-      'Once your order has been shipped, you will receive an email with a tracking number.',
+    answer: 'Long enough to find a winner or winners',
   },
   {
     question: 'How many people can win the grand prize?',
-    answer:
-      'Once your order has been shipped, you will receive an email with a tracking number.',
+    answer: 'Stick around to find out',
   },
 ]
